@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Smart Notification</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="description">   &#160;&#160;&#160;&#160; By checking this box, the Smart Notification Mode will be triggered.\n 
+         &#160;&#160;&#160;&#160; Smart Notification is a function designed to keep you from being disturbed by excessive notifications,
+             and also to extend your battery life. It intelligently detects whether you are interacting with the phone or not, and temporarily 
+             block your notifications when you are not likely to check them by shutting down the radio.\n &#160;&#160;&#160;&#160; Don\'t worry you won\'t lose any 
+             notifications. The radio will be recovered automatically and blocked notifications will show up once you come back to the phone. </string>
+    <string name="smart_notification"> Smart Notification</string>
+
+</resources>
