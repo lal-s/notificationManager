@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent" android:layout_height="fill_parent">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:contentDescription="logo"
+    android:gravity="center"
+    android:background="#ffffff"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    >
+   
+     <TextView
+        android:id="@+id/Text15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:gravity="center"
+    	
+       
+        
+        android:textSize="40sp"
+        android:paddingTop="10dp"
+       
+        android:fontFamily="sans-serif"
+        android:text="Green Notifications"
+        android:textColor="#228B22"
+         />
+    
+
+   
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+       
+        android:contentDescription="logo"
+       
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+        
+        android:src="@drawable/greenbell2" />
+
+    <TextView
+        android:id="@+id/Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:gravity="center"
+       
+        
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+       
+        android:fontFamily="sans-serif"
+        android:text="In Class?"
+        android:textColor="#000"
+         />
+     <TextView
+        android:id="@+id/Text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+   		 android:paddingRight="10dp"
+        
+        android:textSize="20sp"
+       
+        android:paddingTop="5dp"
+        android:fontFamily="sans-serif"
+        android:text="Trying to Sleep?"
+        android:textColor="#000"
+         />
+      <TextView
+        android:id="@+id/Text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+   	 android:paddingRight="10dp"
+        android:textSize="20sp"
+        android:paddingTop="5dp"
+        android:fontFamily="sans-serif"
+        android:text="Too Tired to Respond?"
+        android:textColor="#000"
+         />
+       <TextView
+        android:id="@+id/Text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+              
+        
+        android:textSize="25sp"
+        android:paddingTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Suppress Notifications"
+        android:textColor="#000"
+         />
+        <TextView
+        android:id="@+id/Text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+              
+        
+        android:textSize="25sp"
+        android:paddingTop="3dp"
+        android:fontFamily="sans-serif"
+        android:text="And"
+        android:textColor="#000"
+         />
+        <TextView
+        android:id="@+id/Text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+   		android:paddingRight="10dp"
+              
+        
+        android:textSize="25sp"
+        android:paddingTop="3dp"
+        android:fontFamily="sans-serif"
+        android:text="Save Energy!!!"
+        android:textColor="#000"
+         />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="logo"
+        android:paddingLeft="10dp"
+   	    android:paddingRight="10dp"
+        
+        android:paddingTop="70dp"
+        
+        
+        android:src="@drawable/arrows" />
+    <TextView
+        android:id="@+id/Text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+              
+        
+        android:textSize="20sp"
+        
+        android:fontFamily="sans-serif"
+        android:text="Swipe Right to continue"
+        android:textColor="#000"
+        android:textStyle="italic"
+         />
+    
+    
+    
+    
+
+</LinearLayout>
+</ScrollView>

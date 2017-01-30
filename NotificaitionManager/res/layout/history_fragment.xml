@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Notification History" 
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector" />
+    
+    
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="logo"
+        android:paddingLeft="10dp"
+   	    android:paddingRight="10dp"
+        
+        android:paddingTop="70dp"
+        
+        
+        android:src="@drawable/arrows" />
+    <TextView
+        android:id="@+id/Text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+              
+        
+        android:textSize="20sp"
+        
+        android:fontFamily="sans-serif"
+        android:text="Swipe Right to continue"
+        android:textColor="#000"
+        android:textStyle="italic"
+         />
+
+</LinearLayout>

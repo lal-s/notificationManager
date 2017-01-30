@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <style>
+        #chart_div{
+        }
+        body{
+           background-color:#ffffff;
+        }
+    </style>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    
+
+      // Load the Visualization API and the bar chart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the bar chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        var rows = new Array();
+        data.addColumn('string', 'Application');
+        data.addColumn('number', 'Total');
+        var suppressedName;
+        if(Android.isSmart()){
+        	suppressedName = 'Suppressed';
+        }
+        else{
+        	suppressedName = 'Almost Supressed';
+        }
+        
+        data.addColumn('number', suppressedName);
+		
+        var appCount = Android.getAppCount();
+		var totalNotifications = 0;
+		var suppressedNotifications = 0;
+        for(var i = 0; i < appCount ; i++) {
+            var appName = Android.getName(i);
+			//var appName = "app" + i;
+            var count = Android.getCount(i);
+            var suppressedCount = Android.getSuppressedCount(i);
+			totalNotifications += count;
+			suppressedNotifications += suppressedCount;
+            rows.push([appName, count, suppressedCount]);
+        }
+        
+        rows.sort(function(a,b) { return b[1] - a[1];} );        
+        data.addRows(rows);
+        
+        var height=appCount*40;
+        
+        if(height<200)
+        	height=200;
+        	
+       	
+         
+        // Set chart options
+        var options = {'title':'Notifications per App',
+                       'titleTextStyle':{
+                          fontSize: 15
+                       },
+                       'hAxis':{
+                          title:'# of Notifications',
+                          minValue:0,
+                          textStyle:{
+                             bold:true
+                          },
+                          titleTextStyle:{
+                             fontSize:16
+                          }
+                       },
+                       'vAxis':{
+                          textStyle:{
+                             bold:true
+                          }
+                       },
+                       'legend':{
+                          position: 'top'
+                       },
+                       'bar':{
+                          groupWidth:'61.8%'
+                       },
+                       'backgroundColor':'#ffffff',
+                       'colors':['#228','#282'],
+                       'width':300,
+                       'height':height};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+		
+		var messageDiv = document.getElementById('total_message');
+		var message1 = document.createTextNode("Total Notifications: " + totalNotifications);
+		var message2;
+		if(Android.isSmart()){
+			message2 = document.createTextNode("Suppressed Notifications: " + suppressedNotifications);
+		}
+		else{
+			message2 = document.createTextNode("Almost Suppressed Notifications: " + suppressedNotifications);
+		}
+		
+		messageDiv.appendChild(message1);
+		messageDiv.appendChild(document.createElement("br"));
+		messageDiv.appendChild(message2);
+				
+		//document.getElementById("totalText").value = "Total Notifications: ";// + totalNotifications;
+		
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the bar chart-->
+	
+    <div id="chart_div"><h1>Loading...</h1></div>
+	
+	<div id="total_message">
+
+	</div>
+	
+  </body>
+</html>
